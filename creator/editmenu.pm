@@ -50,7 +50,7 @@ sub EditMenu {
         return;
     }
     
-    system("clear");
+    system("cls");
     
     # inflate the scene file
     my %section;
@@ -75,16 +75,16 @@ sub EditMenu {
         chomp($resp);
         
         if ($resp eq "quit") {
-            system("clear");
+            system("cls");
             last;
         } elsif ($resp eq "char") {
-            system("clear");
+            system("cls");
             CharsMenu(\%chars);
-            system("clear");
+            system("cls");
         } elsif ($resp eq "plot") {
-            system("clear");
+            system("cls");
             PlotMenu(\@file, \%section, \%chars, $filename);
-            system("clear");
+            system("cls");
         } elsif ($resp eq "edit") {
             # edit file in vim
             my $command = "vim ".$filename;

@@ -38,7 +38,7 @@ sub welcome {
     util::PrintAtPos('l', 'b', "Press <ENTER> to continue...");
     util::SetCursorPos('r', 'b');
     <STDIN>;
-    system("clear");
+    system("cls");
 }
 
 # Displays a scene, reads user input, and invokes the next scene
@@ -65,7 +65,7 @@ sub scene {
     $sceneInd = int($data{'scene'}) if exists $data{'scene'};
     
     while(lc($playerAns) ne "q"){
-        system("clear");
+        system("cls");
         
         # read and display the plot text
         util::SetCursorPos('l', 1);
@@ -90,7 +90,7 @@ sub scene {
             }
             next;
         } elsif ($playerAns eq "_help") {
-            system("clear");
+            system("cls");
             welcome(0);
             next;
         }
@@ -109,13 +109,13 @@ sub scene {
         if ($plot_res eq 0) {
             print "Hope you enjoy the game. Bye :D";
             sleep(2);
-            system("clear");
+            system("cls");
             last;
         }
         
         $sceneInd = $plot_res;
         
-        system("clear");
+        system("cls");
     }
 }
 

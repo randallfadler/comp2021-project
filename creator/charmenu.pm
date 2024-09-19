@@ -65,7 +65,7 @@ sub ShowChars {
         util::DieArgs("creator::ShowChars()", 1, scalar(@_));
     }
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Creator Mode: Show Characters ===");
     
     my %chars = %{$_[0]};
@@ -78,7 +78,7 @@ sub ShowChars {
     
     print "\nPress <ENTER> to continue...";
     <STDIN>;
-    system("clear");
+    system("cls");
 }
 
 1;

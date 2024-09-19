@@ -2,6 +2,8 @@
 
 # Characters: Stores all character names
 [characters]
+Randy
+Carrie
 
 # Character starts with index 1
 # You can recall the different character names by using $n, where n is the
@@ -18,19 +20,52 @@ Bob
     # Displaying ASCII Art:
     # Load your ASCII art into ./art.txt, set a tag, then use it
 
-    (art=hkust)
-    Plot Statement 1
+    (art=opening)
+In the tranquil hamlet of Greenhill, cradled in the bosom of the Shire, there dwelt a valiant hobbit named Frodo. Upon a fateful day, tidings reached the village that  Elara, the daughter of the village elder, had been seized by a dread dragon and borne away to its lair high in the Misty Mountains. Resolute in his quest to save her, Frodo summoned his dearest companions: Samwise, a steadfast gardener; Merry, a cunning tactician; and Pippin, a spirited wanderer.
 
     # Options: (opt="<display_string>", <user_input>, <goto_plot>)
-        (opt="Continue walking",y,2)
-        (opt="Stop",n,3)
+        (opt="Talk to your friends and tell them of the dangers.",1,2)
+        (opt="Find food and water.",2,3)
+        (opt="Begin the journey.",3,4)
 
-2.
-    Continue Walking
+2. 
+Hark! Thou dost summon thy companions and confer upon the peril and the scheme to deliver the damsel. Thy comrades assent to the design and gathereth timber for a blaze, victuals, and water. Thenceforth, thou dost embark upon thy quest up the mount.
+    # Options: (opt="<display_string>", <user_input>, <goto_plot>)
+        (opt="Take the shortest path",1,5)
+        (opt="Take the easiest path",2,6)
+        (opt="Take the warmest path",3,7)
 
-3.
-    Stop
+3. 
+Thou and thy motley band of companions seek sustenance and water to bear upon thy quest. Once their packs were laden, they didst ascend the mountain. There ran a mountain stream towards the pass, and upon the shore lay a canoe. Thus, thou and thy fellows didst slide the vessel into the water, embark, and make for the pass.
+        (opt="Paddle towards the mountains.",1,8)
+        (opt="Paddle towards the valley.",2,9)
+        (opt="Drift along with the current.",3,10)
 
-4. Statement 2
+4. 
+Thou and thy companions tread the path towards the mountain pass. As thou dost draw nearer to the mountain, the path doth begin to ascend. Higher and higher thou dost climb, and the air groweth ever colder. Shivering, thou knowest that if thou canst but reach the mountain pass and find the valley, it shall lead thee straight to the dragon’s lair.
     # For users to quit, make an infinite loop and set the user input to "q"
-    (opt="Quit",q,100)
+    # Options: (opt="<display_string>", <user_input>, <goto_plot>)
+        (opt="Begin to jog to keep warm.",1,11)
+        (opt="Stop and gather wood for a fire.",2,12)
+        (opt="Open your wine flask and take a swig",3,13)
+
+5. 
+Merry doth recall a shortcut around the mountain and doth speak of it to the others. They do agree and set forth in that direction. The path was narrow and oftentimes over great rocks and steep hills, yet verily, it did lead them around the mountain, towards the valley.  However, soon, the biggest rock appearth before the and you must decideth on what to do.
+    # Options: (opt="<display_string>", <user_input>, <goto_plot>)
+        (opt="Climb over the rock.",1,14)
+        (opt="Go around the rock.",2,15)
+
+6. Samwise says to everyone, lets take the easy path.  Afterall, it is a long journey and we must conserve our strength for one does not know what dreadful creatures we might encounter along the way.
+    # Options: (opt="<display_string>", <user_input>, <goto_plot>)
+        (opt="Convince the group to head towards the easy path",1,16)
+        (opt="Convince the group to go back to where they came.",1,16)
+
+
+14.
+Alas, thou dost slip upon some treacherous moss and strike thy head upon the rocks. Blood doth spill forth, and thy life ebbs away. Thy quest hath come to a tragic end.
+    # Options: (opt="<display_string>", <user_input>, <goto_plot>)  
+      (opt="Quit",q,100)
+
+15.
+Go around the rock.
+

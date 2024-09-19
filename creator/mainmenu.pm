@@ -23,7 +23,7 @@ sub MainMenu {
         util::DieArgs("creator::MainMenu()", 1, scalar(@_));
     }
     
-    system("clear");
+    system("cls");
     
     while (1) {
         # print gui
@@ -98,7 +98,7 @@ sub ListFiles {
     my @files = grep(/\.txt$/, readdir($dir));
     closedir $dir;
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Creator Mode: Show Files in $path ===");
     
     util::SetCursorPos('l', 2);
@@ -113,7 +113,7 @@ sub ListFiles {
     
     print "\nPress <ENTER> to continue...";
     <STDIN>;
-    system("clear");
+    system("cls");
 }
 
 1;

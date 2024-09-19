@@ -143,7 +143,7 @@ sub ListPlot {
         util::DieArgs("creator::ListPlot()", 1, scalar(@_));
     }
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Creator Mode: List Plot Nodes ===");
     
     my %sections = %{$_[0]};
@@ -156,7 +156,7 @@ sub ListPlot {
     
     print "\nPress <ENTER> to continue...";
     <STDIN>;
-    system("clear");
+    system("cls");
 }
 
 # Show all attributes of a given plot element
@@ -185,7 +185,7 @@ sub ShowPlot {
         return;
     }
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Creator Mode: Show Plot #$plotnum ===");
     
     util::SetCursorPos('l', 2);
@@ -221,7 +221,7 @@ sub ShowPlot {
     
     print "\nPress <ENTER> to continue...";
     <STDIN>;
-    system("clear");
+    system("cls");
 }
 
 1;

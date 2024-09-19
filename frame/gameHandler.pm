@@ -39,7 +39,7 @@ sub SaveGame {
     }
     chdir "./saves";
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Save Game ===");
     util::PrintAtPos('l', 2, "Enter the filename you want to save to.");
     util::PrintAtPos('l', 3, "If the file does not exist, it will be created for you.");
@@ -130,7 +130,7 @@ sub LoadGame {
         util::DieArgs("frame::LoadGame()", 0, scalar(@_));
     }
     
-    system("clear");
+    system("cls");
     util::PrintAtPos('m', 't', "=== Load Game ===");
     
     my %data = ();
